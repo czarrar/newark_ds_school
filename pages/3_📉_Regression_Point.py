@@ -52,8 +52,8 @@ def plot_reg():
     return
 
 
-st.markdown("# Outliers - Play with one data")
-st.sidebar.header("Outliers - Play with one data")
+st.markdown("# Outliers")
+st.sidebar.header("Outliers")
 st.write(
     """This demo allows you to play with one point and see how that effects
         the regression results. Is it a problem that a single point can have 
