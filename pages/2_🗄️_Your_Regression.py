@@ -37,7 +37,7 @@ def plot_reg(edited_df):
 
     # Get r**2
     lr_r2 = r2_score(revenue, lr_pred).round(4) * 100
-    st.markdown(f"- r^2 of regression line: {lr_r2}%")
+    st.markdown(f"- r^2 (percent fit): {lr_r2}%")
 
     return
 
@@ -51,7 +51,8 @@ st.write(
         regression. Remember that the budget and revenue here are in millions. 
         So a budget of 10 would mean 10 million. Feel free to add rows and more data."""
 )
-st.markdown("Note: r^2 tells us how much variation our line explains of the data. It can be 0 to 100%.")
+st.markdown("""Note: r^2 tells us how much variation our line explains of the data. 
+It can be 0 to 100%. It can also be negative if the model explains the data worse than a horizontal line.""")
 
 df = pd.DataFrame(
     [

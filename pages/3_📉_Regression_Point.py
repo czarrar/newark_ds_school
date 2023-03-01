@@ -52,16 +52,17 @@ def plot_reg():
     return
 
 
-st.markdown("# Run Your Own Regression")
-st.sidebar.header("Your Own Regression")
+st.markdown("# Outliers - Play with one data")
+st.sidebar.header("Outliers - Play with one data")
 st.write(
-    """This demo allows you to play with your own data and see how that effects
-        the regression results. Try to create some outliers (data points that 
-        are very different from the others) and see how that effects the 
-        regression. Remember that the budget and revenue here are in millions. 
-        So a budget of 10 would mean 10 million. Feel free to add rows and more data."""
+    """This demo allows you to play with one point and see how that effects
+        the regression results. Is it a problem that a single point can have 
+        such a big effect on the data? How might you solve this problem when
+        a single data point is so different from the general trend?"""
 )
-st.markdown("Note: r^2 tells us how much variation our line explains of the data. It can be 0 to 100%.")
+st.markdown("""Note: r^2 tells us how much variation our line explains of the data. 
+It can be 0 to 100%. It can also be negative if the model explains the data worse than a horizontal line.""")
+
 
 if 'revenue' not in st.session_state:
     st.session_state['revenue'] = 500.0
